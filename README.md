@@ -23,11 +23,16 @@ Primeiro, foi criado um protótipo de baixa fidelidade onde foi desenvolvido e p
 
 ### Protótipo de alta fidelidade
 E segundo passo, criamos um protótipo de alta fidelidade para que o cliente tivesse uma noção melhor de como ficaria e pudesse sugerir as modificações necessárias.
-Protótipo de alta fidelidade para Desktop
-![PrototipoDesktop1](Prototipo/PrototipoDesktop1.JPG)
-![PrototipoDesktop2](Prototipo/PrototipoDesktop2.JPG)
-![PrototipoDesktop3](Prototipo/PrototipoDesktop3.JPG)
-![PrototipoMobile](Prototipo/PrototipoMobile.JPG)
+
+[h3] Protótipo de alta fidelidade para Desktop
+
+![](/src/Prototipo/Prototipo%20Desktop%201.JPG)
+![](/src/Prototipo/Prototipo%20Desktop%202.JPG)
+![](/src/Prototipo/Prototipo%20Desktop%203.JPG)
+
+[h3] Protótipo de alta fidelidade para Celular
+
+![](/src/Prototipo/Prototipo%20Mobile.JPG)
 
 ### Usabilidade
 Mandamos o protótipo para várias pessoas testarem a usabilidade do projeto.
