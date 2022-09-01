@@ -17,26 +17,30 @@ Deverá ter ordenação por ordem alfábetica (A-Z) e (Z-A).
 Deverá ter filtro pelo por 'Status' e 'Species'.
 
 ## 🖼️ *Protótipos*
-Primeiro, foi criado um protótipo de baixa fidelidade onde foi desenvolvido e pensado o que este website deveria ter para corresponder as necessidades do cliente que solicitou o projeto.
+Primeiro, foi criado um protótipo de baixa fidelidade onde foi desenvolvido e pensado o que este website deveria ter para corresponder as necessidades do cliente que solicitou o projeto. Em segui o protótipo de alta fidelidade para que possa ser testadas as funcionalidades e usabilidades do usuário.
 
 ### Protótipo de baixa fidelidade
+Utilizando lápis e papel foi-se criado um rascunho da ideia para o projeto.
+
+**Protótipo de baixa fidelidade**
+![](src/Prototipo/PrototipoBaixa.jpeg)
 
 ### Protótipo de alta fidelidade
-E segundo passo, criamos um protótipo de alta fidelidade para que o cliente tivesse uma noção melhor de como ficaria e pudesse sugerir as modificações necessárias.
+E segundo passo, um protótipo de alta fidelidade para que o cliente tivesse uma noção melhor de como ficaria e pudesse sugerir as modificações necessárias.
 
-[h3] Protótipo de alta fidelidade para Desktop
+**Protótipo de alta fidelidade para Desktop**
 
 ![](/src/Prototipo/Prototipo%20Desktop%201.JPG)
 ![](/src/Prototipo/Prototipo%20Desktop%202.JPG)
 ![](/src/Prototipo/Prototipo%20Desktop%203.JPG)
 
-[h3] Protótipo de alta fidelidade para Celular
+**Protótipo de alta fidelidade para Celular**
 
 ![](/src/Prototipo/Prototipo%20Mobile.JPG)
 
 ### Usabilidade
-Mandamos o protótipo para várias pessoas testarem a usabilidade do projeto.
-Percebemos que alguns erros ortográficos e a falta de um botão para voltar ao menu inicial.
+Depois de enviado o protótipo para várias pessoas testarem a usabilidade do projeto. (5 ao total)
+Foi percebido que alguns erros ortográficos e a falta de um botão para voltar ao menu inicial. E alterado para chegar ao protótipo final.
 
 
 
