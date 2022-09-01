@@ -1,4 +1,43 @@
-# Data Lovers
+# Data Lovers 🌟🧬 Rick e Morty 🪐
+
+## 🚀 *Introdução*
+
+Durante a época de Halloween na Escola de Idiomas X, os alunos participam de uma gincana. Neste ano os alunos irão competir em equipes com quiz sobre os personagens de Rick e Morty. Para isso, precisarão de um local que tenha as informações para responderem as perguntas sobre personagens. Este projeto tem a intenção de criar um site que possa ser acessado por computador ou celular, e assim que eles consigam todas as informações necessárias para participar da gincana.
+Este projeto está sendo criado em função de como os alunos precisam dele para participar da gincana de Halloween.
+
+## 📋 *Histórias de usuário*
+1. Eu, como aluno/visitante quero ter acesso as informações sobre os personagens da Série Rick e Morty.
+2. Eu, como aluno/visitante preciso ordenar os personagens por ordem afabetica (A-Z).
+3. Eu, como aluno/visitante preciso filtrar os personagens por 'Status' e 'Species'
+4. Eu, como aluno/visitante quero saber números de porcentagens a respeito dos personagens.
+
+### 🎯 *Critérios de aceite*
+Deverá ter um menu onde o visitante possa percorrer todas as páginas com facilidade.
+Deverá ter ordenação por ordem alfábetica (A-Z) e (Z-A).
+Deverá ter filtro pelo por 'Status' e 'Species'.
+
+## 🖼️ *Protótipos*
+Primeiro, foi criado um protótipo de baixa fidelidade onde foi desenvolvido e pensado o que este website deveria ter para corresponder as necessidades do cliente que solicitou o projeto.
+
+### Protótipo de baixa fidelidade
+
+### Protótipo de alta fidelidade
+E segundo passo, criamos um protótipo de alta fidelidade para que o cliente tivesse uma noção melhor de como ficaria e pudesse sugerir as modificações necessárias.
+Protótipo de alta fidelidade para Desktop
+
+### Usabilidade
+Mandamos o protótipo para várias pessoas testarem a usabilidade do projeto.
+Percebemos que alguns erros ortográficos e a falta de um botão para voltar ao menu inicial.
+
+
+
+
+
+
+
+
+
+
 
 ## Índice
 
