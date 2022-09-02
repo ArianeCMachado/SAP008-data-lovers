@@ -5,8 +5,51 @@
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <div id="root"></div>
+    <header>
+      <div class="logo">
+        <img src="Images/ReM.webp" id="ReM">
+      </div>
+      <nav class="buttons">
+        <a href="index.html"><button class="btn" id="color">Home</button></a>
+        <a href="characters.html"><button class="btn">Characters</button></a>
+        <a href="curiosities.html"><button class="btn">Curiosities</button></a>
+      </nav>
+    </header>
+
+    <div class="menu-filter">
+      <select class="drop-menu">
+        <option>Status</option>
+        <option class="drop-menu" value="Alive">Alive</option>
+        <option class="drop-menu" value="Dead">Dead</option>
+        <option class="drop-menu" value="Unknown">Unknown</option>
+      </select>
+      <select class="drop-menu">
+        <option>Specie</option>
+        <option class="drop-menu" value="Human">Human</option>
+        <option class="drop-menu" value="Alien">Alien</option>
+        <option class="drop-menu" value="Humanoid">Humanoid</option>
+      </select>
+      <select class="drop-menu">
+        <option>Order by</option>
+        <option class="drop-menu" value="A-Z">A-Z</option>
+        <option class="drop-menu" value="Z-A">Z-A</option>
+      </select>
+    </div>
+ 
+ 
+
+
+
+
+
+
+    <footer class="made">
+      <img src="Images/ReMfim.JPG" id="ReMfim">
+      <p> Created and developed by <a href="https://github.com/ArianeCMachado">Ariane Machado</a> for Bootcamp SAP008 - Laboratoria ©
+      </p>
+    </footer>
     <script src="main.js" type="module"></script>
   </body>
 </html>

@@ -1,0 +1,34 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
+  background-color: #000000;
+  color: white;
+  font-family: roboto;
+}
+
+.logo{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.container .hole {
+    height: 100%;
+    width: 220%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.container .synopsis {
+    width: 50%;
+    display: block;
+    text-align: center;
+    padding: 20px;
+    font-size:xxx-large;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
