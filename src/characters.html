@@ -17,24 +17,35 @@
         <a href="curiosities.html"><button class="btn">Curiosities</button></a>
       </nav>
     </header>
+      
 
+    </select> 
     <div class="menu-filter">
-      <select class="drop-menu">
-        <option>Status</option>
-        <option class="drop-menu" value="Alive">Alive</option>
-        <option class="drop-menu" value="Dead">Dead</option>
-        <option class="drop-menu" value="Unknown">Unknown</option>
+      <select class="select-status btn">
+        <option value="status" selected>Status</option>
+        <option class="select-status" value="unknown">Unknown</option>
+        <option class="select-status" value="Alive">Alive</option>
+        <option class="select-status" value="Dead">Dead</option>
       </select>
-      <select class="drop-menu">
-        <option>Specie</option>
-        <option class="drop-menu" value="Human">Human</option>
-        <option class="drop-menu" value="Alien">Alien</option>
-        <option class="drop-menu" value="Humanoid">Humanoid</option>
+
+      <select class="select-species btn">
+      <option value="specie" selected>Specie</option>
+        <option class="select-species" value="Human">Human</option>
+        <option class="select-species" value="Alien">Alien</option>
+        <option class="select-species" value="Humanoid">Humanoid</option>
+        <option class="select-species" value="Animal">Animal</option>
       </select>
-      <select class="drop-menu">
+
+      <select class="select-gender btn">
+        <option value="gender" selected>Gender</option>
+          <option class="select-gender" value="Male">Male</option>
+          <option class="select-gender" value="Female">Female</option>
+        </select>
+
+      <select class="order-menu">
         <option>Order by</option>
-        <option class="drop-menu" value="A-Z">A-Z</option>
-        <option class="drop-menu" value="Z-A">Z-A</option>
+        <option class="selectAZ" value="A-Z">A-Z</option>
+        <option class="selectAZ" value="Z-A">Z-A</option>
       </select>
     </div>
 
@@ -42,12 +53,6 @@
     </ul>
  
  
-
-
-
-
-
-
     <footer class="made">
       <img src="Images/ReMfim.JPG" id="ReMfim">
       <p> Created and developed by <a href="https://github.com/ArianeCMachado">Ariane Machado</a> for Bootcamp SAP008 - Laboratoria ©
