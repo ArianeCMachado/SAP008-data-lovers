@@ -1,4 +1,5 @@
 import data from './data/rickandmorty/rickandmorty.js';
+import {sortCharacters} from './data.js'
 
 const divCharacter=document.querySelector(".characters")
 
@@ -52,13 +53,11 @@ const resultGender = characters.filter(function(character){
   }
 selectGenders.addEventListener("change",printGenderFiltered);
 
-/*const selectOrderAZ = document.querySelector(".selectAZ");
+const selectOrderAZ = document.querySelector("#order");
 const printAZOrdered =()=>{
-const orderAZ = selectOrderAZ.value
-const resultAZ = characters.sort(function(character){
-  return character.name === orderAZ
-  })
+  const orderAZ = selectOrderAZ.value
+  const resultAZ = sortCharacters(characters,orderAZ)
   PrintarCards(resultAZ)
-  }
-selectOrderAZ.addEventListener("change",printAZOrdered);*/
+}
+selectOrderAZ.addEventListener("change",printAZOrdered);
 
