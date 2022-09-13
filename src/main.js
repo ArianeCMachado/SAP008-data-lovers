@@ -1,5 +1,5 @@
 import data from './data/rickandmorty/rickandmorty.js';
-import {sortCharacters} from './data.js'
+import { CalAgregado, filterGender, sortCharacters } from './data.js';
 
 const divCharacter=document.querySelector(".characters")
 
@@ -43,14 +43,17 @@ const resultStatu = characters.filter(function(character){
   }
 selectStatus.addEventListener("change",printStatusFiltered);
 
+
 const selectGenders = document.querySelector(".select-gender");
 const printGenderFiltered =()=>{
-const gender = selectGenders.value
-const resultGender = characters.filter(function(character){
-  return character.gender === gender
-  })
+  const gender = selectGenders.value
+  const resultGender = filterGender(characters, gender)
   PrintarCards(resultGender)
-  }
+  const porcent = resultGender.length
+  const resultCalculo = CalAgregado(characters.length,porcent)
+  console.log(resultCalculo)
+  //.innerHTML=resultCalculo
+}
 selectGenders.addEventListener("change",printGenderFiltered);
 
 const selectOrderAZ = document.querySelector("#order");
@@ -60,4 +63,3 @@ const printAZOrdered =()=>{
   PrintarCards(resultAZ)
 }
 selectOrderAZ.addEventListener("change",printAZOrdered);
-

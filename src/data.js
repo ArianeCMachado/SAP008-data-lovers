@@ -21,3 +21,16 @@ export const sortCharacters = (characters, order) => {
   }
 };
 
+export const filterGender = (characters, gender) =>{
+  return characters.filter(function(character){
+    return character.gender === gender
+    }
+  )
+ 
+};
+
+export const CalAgregado = (total,parcial) =>{
+  return Math.round((parcial*100)/total);
+};
+
+
