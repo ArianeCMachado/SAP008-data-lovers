@@ -33,4 +33,3 @@ export const CalAgregado = (total,parcial) =>{
   return Math.round((parcial*100)/total);
 };
 
-

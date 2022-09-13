@@ -51,8 +51,7 @@ const printGenderFiltered =()=>{
   PrintarCards(resultGender)
   const porcent = resultGender.length
   const resultCalculo = CalAgregado(characters.length,porcent)
-  console.log(resultCalculo)
-  //.innerHTML=resultCalculo
+  document.getElementById("mensagem").innerHTML= "Esta categoria apresenta" +resultCalculo+"% dos personagens"
 }
 selectGenders.addEventListener("change",printGenderFiltered);
 
@@ -63,3 +62,14 @@ const printAZOrdered =()=>{
   PrintarCards(resultAZ)
 }
 selectOrderAZ.addEventListener("change",printAZOrdered);
+
+
+/*const selectSpecies = document.querySelector(".select-species");
+const printSpeciesFiltered =()=>{
+const specie = selectSpecies.value
+const resultSpecie = characters.filter(function(character){
+  return character.species === specie
+  })
+PrintarCards(resultSpecie)
+}
+selectSpecies.addEventListener("change",printSpeciesFiltered);*/
