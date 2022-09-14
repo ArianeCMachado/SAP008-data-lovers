@@ -28,7 +28,6 @@ const selectStatus = document.querySelector(".select-status");
 const printStatusFiltered =()=>{
   const statu = selectStatus.value
   const resultStatu = filterStatu(characters,statu) 
-  console.log(resultStatu)
   PrintarCards(resultStatu)
   const parcial = resultStatu.length
   const resultCalculo = CalAgregado(characters.length,parcial)
@@ -51,7 +50,6 @@ const selectGenders = document.querySelector(".select-gender");
 const printGenderFiltered =()=>{
   const gender = selectGenders.value
   const resultGender = filterGender(characters, gender)
-  console.log(resultGender)
   PrintarCards(resultGender)
   const parcial = resultGender.length
   const resultCalculo = CalAgregado(characters.length,parcial)
