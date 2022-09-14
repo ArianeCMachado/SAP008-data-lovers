@@ -26,10 +26,24 @@ export const filterGender = (characters, gender) =>{
     return character.gender === gender
     }
   )
- 
+};
+
+export const filterSpecie = (characters, specie) =>{
+  return characters.filter(function(character){
+    return character.species === specie
+    }
+  )
+};
+
+export const filterStatu = (characters, statu) =>{
+  return characters.filter(function(character){
+    return character.status === statu
+    }
+  )
 };
 
 export const CalAgregado = (total,parcial) =>{
   return Math.round((parcial*100)/total);
 };
+
 

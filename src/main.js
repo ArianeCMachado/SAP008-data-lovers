@@ -1,5 +1,5 @@
 import data from './data/rickandmorty/rickandmorty.js';
-import { CalAgregado, filterGender, sortCharacters } from './data.js';
+import { CalAgregado, filterGender, filterSpecie, filterStatu, sortCharacters } from './data.js';
 
 const divCharacter=document.querySelector(".characters")
 
@@ -23,35 +23,39 @@ const PrintarCards =lista => {
   }
 PrintarCards(characters)
 
-const selectSpecies = document.querySelector(".select-species");
-const printSpeciesFiltered =()=>{
-const specie = selectSpecies.value
-const resultSpecie = characters.filter(function(character){
-  return character.species === specie
-  })
-PrintarCards(resultSpecie)
-}
-selectSpecies.addEventListener("change",printSpeciesFiltered);
 
 const selectStatus = document.querySelector(".select-status");
 const printStatusFiltered =()=>{
-const statu = selectStatus.value
-const resultStatu = characters.filter(function(character){
-  return character.status === statu
-  })
+  const statu = selectStatus.value
+  const resultStatu = filterStatu(characters,statu) 
+  console.log(resultStatu)
   PrintarCards(resultStatu)
-  }
-selectStatus.addEventListener("change",printStatusFiltered);
-
+  const parcial = resultStatu.length
+  const resultCalculo = CalAgregado(characters.length,parcial)
+  document.getElementById("mensagem").innerHTML= "This category represents " +resultCalculo+ " % of the characters"
+    }
+  selectStatus.addEventListener("change",printStatusFiltered);
+  
+const selectSpecies = document.querySelector(".select-species");
+const printSpeciesFiltered =()=>{
+  const specie = selectSpecies.value
+  const resultSpecie = filterSpecie(characters,specie)
+  PrintarCards(resultSpecie)
+  const parcial = resultSpecie.length
+  const resultCalculo = CalAgregado(characters.length,parcial)
+  document.getElementById("mensagem").innerHTML= "This category represents " +resultCalculo+ " % of the characters"
+}
+selectSpecies.addEventListener("change",printSpeciesFiltered);
 
 const selectGenders = document.querySelector(".select-gender");
 const printGenderFiltered =()=>{
   const gender = selectGenders.value
   const resultGender = filterGender(characters, gender)
+  console.log(resultGender)
   PrintarCards(resultGender)
-  const porcent = resultGender.length
-  const resultCalculo = CalAgregado(characters.length,porcent)
-  document.getElementById("mensagem").innerHTML= "Esta categoria apresenta" +resultCalculo+"% dos personagens"
+  const parcial = resultGender.length
+  const resultCalculo = CalAgregado(characters.length,parcial)
+  document.getElementById("mensagem").innerHTML= "This category represents " +resultCalculo+ " % of the characters"
 }
 selectGenders.addEventListener("change",printGenderFiltered);
 
@@ -73,3 +77,13 @@ const resultSpecie = characters.filter(function(character){
 PrintarCards(resultSpecie)
 }
 selectSpecies.addEventListener("change",printSpeciesFiltered);*/
+
+/*const selectStatus = document.querySelector(".select-status");
+const printStatusFiltered =()=>{
+  const statu = selectStatus.value
+  const resultStatu = characters.filter(function(character){
+    return character.status === statu
+  })
+  PrintarCards(resultStatu)
+  }
+  selectStatus.addEventListener("change",printStatusFiltered);*/
