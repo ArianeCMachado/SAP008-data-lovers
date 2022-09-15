@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Data Lovers</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <img src="Images/ReM.webp" id="ReM">
+      </div>
+      <nav class="buttons">
+        <a href="index.html"><button class="btn" id="color">Home</button></a>
+        <a href="characters.html"><button class="btn">Characters</button></a>
+      </nav>
+    </header>
+      
+    <div class="menu-filter">
+      <select class="select-status btn" id="status">
+        <option value="status" selected>Status</option>
+        <option class="select-status" value="unknown">Unknown</option>
+        <option class="select-status" value="Alive">Alive</option>
+        <option class="select-status" value="Dead">Dead</option>
+    </select>
+
+      <select class="select-species btn">
+      <option value="specie" selected>Specie</option>
+        <option class="select-species" value="Human">Human</option>
+        <option class="select-species" value="Alien">Alien</option>
+        <option class="select-species" value="Humanoid">Humanoid</option>
+        <option class="select-species" value="Animal">Animal</option>
+        <option class="select-species" value="Robot">Robot</option>
+        <option class="select-species" value="Cronenberg">Cronenberg</option>
+        <option class="select-species" value="Poopybutthole">Poopybutthole</option>
+        <option class="select-species" value="unknown">Unknown</option>
+      </select>
+      
+      <select class="select-gender btn">
+        <option value="gender" selected>Gender</option>
+          <option class="select-gender" value="Male">Male</option>
+          <option class="select-gender" value="Female">Female</option>
+          <option class="select-gender" value="unknown">Unknown</option>
+        </select>
+
+      <select class="order-menu" id="order">
+        <option>Order by</option>
+        <option class="selectAZ" value="A-Z">A-Z</option>
+        <option class="selectAZ" value="Z-A">Z-A</option>
+      </select>
+    </div>
+
+<div id="mensagem">
+</div>
+
+<ul class="characters">
+</ul>
+ 
+ 
+    <footer class="made">
+      <img src="Images/ReMfim.JPG" id="ReMfim">
+      <p> Created and developed by <a href="https://github.com/ArianeCMachado">Ariane Machado</a> for Bootcamp SAP008 - Laboratoria ©
+      </p>
+    </footer>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
