@@ -1,13 +1,44 @@
 import { sortCharacters, filterGender, filterSpecie, filterStatu, CalAgregado } from '../src/data.js';
 
-const characters = [{
-  name: "Ricky"
-}, {
-  name: "Sam"
-}, {
-  name: "Morty"
+const Ricky= {
+  name: "Ricky",
+  status: "Alive",
+  species: "Human",
+  gender: "Male",
+};
+const Sam= {
+  name: "Sam",
+  status: "Alive",
+  gender: "Female",
+  species: "Human",
+};
+const Morty= {
+  name: "Morty",
+  status: "Alive",
+  species: "Human",
+  gender: "Male",
+};
+const Albert={
+  name:"Albert Einstein",
+  status: "Dead",
+  gender: "Male",
+  species: "Human",
+};
+const Beth={
+  name: "Beth",
+  status: "Alive",
+  species: "Human",
+  gender: "Female",
+};
+const Jerry ={
+  name: "Jerry",
+  status: "Dead",
+  species: "Human",
+  gender: "Male",
 }
-]
+
+const characters = [ Ricky, Sam, Morty, Albert, Beth, Jerry]
+
 
 describe('sortCharacters', () => {
 
@@ -16,13 +47,13 @@ describe('sortCharacters', () => {
   });
 
   it('should return "Morty", "Ricky", "Sam" for "Ricky", "Sam", "Morty" with order=="A-Z"', () => {
-    expect(sortCharacters(characters, "A-Z")).toStrictEqual([{
-      name: "Morty"
-    }, {
-      name: "Ricky"
-    }, {
-      name: "Sam"
-    }
+    expect(sortCharacters(characters, "A-Z")).toStrictEqual([
+      Albert,
+      Beth,
+      Jerry,
+      Morty,
+      Ricky,
+      Sam
     ]);
   });
 
@@ -31,28 +62,19 @@ describe('sortCharacters', () => {
   });
 
   it('should return "Morty", "Ricky", "Sam" for "Ricky", "Sam", "Morty" with order=="Z-A"', () => {
-    expect(sortCharacters(characters, "Z-A")).toStrictEqual([{
-      name: "Sam"
-    }, {
-      name: "Ricky"
-    }, {
-      name: "Morty"
-    }
+    expect(sortCharacters(characters, "Z-A")).toStrictEqual([
+      Sam,
+      Ricky,
+      Morty,
+      Jerry,
+      Beth,
+      Albert
     ]);
   });
 
 });
 
-const charactersGender = [{
-  name: "Rick", 
-  gender: "Male",
-  status: "Alive"
-}, {
-  name: "Sam", 
-  gender: "Female",
-  status: "Alive"
-}
-];
+
 
 describe('filterGender', () => {
 
@@ -61,25 +83,14 @@ describe('filterGender', () => {
   });
 
   it('should return "Sam" for characters with genders=="female"', () => {
-    expect(filterGender(charactersGender, "Female")).toStrictEqual([{
-      name: "Sam",
-      gender: "Female",
-      status: "Alive",
-    }],
+    expect(filterGender(characters, "Female")).toStrictEqual([
+      Sam,
+      Beth
+    ],
     );
   });
 });
 
-const charactersSpecies = [{
-  name: "Ricky", 
-  gender: "Male",
-  species: "Human"
-}, {
-  name: "Abadango Cluster Princess", 
-  gender: "Female",
-  species: "Alien"
-}
-];
 
 describe('filterSpecie', () => {
 
@@ -88,26 +99,18 @@ describe('filterSpecie', () => {
   });
 
   it('should return "Ricky" for characters with Specie=="human"', () => {
-    expect(filterSpecie(charactersSpecies, "Human")).toStrictEqual([{
-      name: "Ricky", 
-      gender: "Male",
-      species: "Human",
-    }],
+    expect(filterSpecie(characters, "Human")).toStrictEqual([
+      Ricky,
+      Sam,
+      Morty,
+      Albert,
+      Beth,
+      Jerry
+    ],
     );
   });
 });
 
-
-const charactersStatus = [{
-  name: "Ricky", 
-  genders: "Male",
-  status: "Dead"
-}, {
-  name: "Sam", 
-  genders: "Female",
-  status: "Alive"
-}
-];
 
 
 describe('filterStatu', () => {
@@ -117,11 +120,12 @@ describe('filterStatu', () => {
   });
 
   it('should return "Sam" for characters with Status=="alive"', () => {
-    expect(filterStatu(charactersStatus, "Alive")).toStrictEqual([{
-      name: "Sam", 
-      genders: "Female",
-      status: "Alive",
-    }],
+    expect(filterStatu(characters, "Alive")).toStrictEqual([
+      Ricky,
+      Sam,
+      Morty,
+      Beth
+    ],
     );
   });
 });
@@ -132,140 +136,13 @@ describe('CalAgregado', () => {
   it('should be a function', () => {
     expect(typeof CalAgregado).toBe('function');
   });
-});
 
-
-
-
-
-
-
-
-/*
-
-const characters = [{
-  "name": "Ricky",
-  "Status": "Alive",
-  "Species": "Human",
-  "Gender": "Male",
-}, {
-  "name": "Sam",
-  "Status": "Alive",
-  "Gender": "Female",
-  "Species": "Human",
-}, {
-  "name": "Morty",
-  "Status": "Alive",
-  "Species": "Human",
-  "Gender": "Male",
-},{
-  "Name":"Albert Einstein",
-  Status: "Dead",
-  Gender: "Male",
-  Species: "Human",
-},{
-  Name: "Beth",
-  Status: "Alive",
-  Species: "Human",
-  Gender: "Female",
-},{
-  name: "Jerry",
-  status: "Dead",
-  species: "Human",
-  gender: "Male",
-}
-]
-
-
-
-describe('filterGender', () => {
-
-  it('should be a function', () => {
-    expect(typeof filterGender).toBe('function');
+  it('should return 50%', () => {
+    expect(CalAgregado(10, 5)).toEqual(50);
   });
 
-  it('should return "Sam", "Beth" for characters with genders=="female"', () => {
-    expect(filterGender(characters, "Female")).toBe([{
-      name: "Sam",
-      Status: "Alive",
-      Gender: "Female",
-      Species: "Human",
-    }], [{
-      Name: "Beth",
-      Status: "Alive",
-      Species: "Human",
-      Gender: "Female",
-    },
-    ]);
+  it('should return 20%', () => {
+    expect(CalAgregado(10, 2)).toEqual(20);
   });
 
 });
-
-describe('filterSpecie', () => {
-
-  it('should be a function', () => {
-    expect(typeof filterSpecie).toBe('function');
-  });
-
-  it('should return "Sam", "Beth" for characters with genders=="female"', () => {
-    expect(filterGender(characters, "Female")).toBe([{
-      name: "Sam",
-      Status: "Alive",
-      Gender: "Female",
-      Species: "Human",
-    }], [{
-      Name: "Beth",
-      Status: "Alive",
-      Species: "Human",
-      Gender: "Female",
-    },
-    ]);
-  });
-
-});
-
-describe('filterStatu', () => {
-
-  it('should be a function', () => {
-    expect(typeof filterStatu).toBe('function');
-  });
-
-  it('should return "Sam", "Beth" for characters with genders=="female"', () => {
-    expect(filterGender(characters, "Female")).toBe([{
-      name: "Sam",
-      Status: "Alive",
-      Gender: "Female",
-      Species: "Human",
-    }], [{
-      Name: "Beth",
-      Status: "Alive",
-      Species: "Human",
-      Gender: "Female",
-    },
-    ]);
-  });
-
-});
-
-describe('CalAgregado', () => {
-
-  it('should be a function', () => {
-    expect(typeof CalAgregado).toBe('function');
-  });
-
-  it('should return "Sam", "Beth" for characters with genders=="female"', () => {
-    expect(filterGender(characters, "Female")).toBe([{
-      name: "Sam",
-      Status: "Alive",
-      Gender: "Female",
-      Species: "Human",
-    }], [{
-      Name: "Beth",
-      Status: "Alive",
-      Species: "Human",
-      Gender: "Female",
-    },
-    ]);
-  });
-
-});*/

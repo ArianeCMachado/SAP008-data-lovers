@@ -64,24 +64,3 @@ const printAZOrdered =()=>{
   PrintarCards(resultAZ)
 }
 selectOrderAZ.addEventListener("change",printAZOrdered);
-
-
-/*const selectSpecies = document.querySelector(".select-species");
-const printSpeciesFiltered =()=>{
-const specie = selectSpecies.value
-const resultSpecie = characters.filter(function(character){
-  return character.species === specie
-  })
-PrintarCards(resultSpecie)
-}
-selectSpecies.addEventListener("change",printSpeciesFiltered);*/
-
-/*const selectStatus = document.querySelector(".select-status");
-const printStatusFiltered =()=>{
-  const statu = selectStatus.value
-  const resultStatu = characters.filter(function(character){
-    return character.status === statu
-  })
-  PrintarCards(resultStatu)
-  }
-  selectStatus.addEventListener("change",printStatusFiltered);*/

@@ -1,6 +1,7 @@
 export const sortCharacters = (characters, order) => {
+  const copy = [...characters]
   if(order=="A-Z"){
-    return characters.sort((a,b)=>{
+    return copy.sort((a,b)=>{
       if(a.name > b.name){
         return 1
       }
@@ -10,7 +11,7 @@ export const sortCharacters = (characters, order) => {
     })
   }
   if(order=="Z-A"){
-    return characters.sort((a,b)=>{
+    return copy.sort((a,b)=>{
       if(a.name < b.name){
         return 1
       }
