@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Data Lovers</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <img src="Images/ReM.webp" id="ReM">
+      </div>
+      <nav class="buttons">
+        <a href="index.html"><button class="btn" id="color">Home</button></a>
+        <a href="characters.html"><button class="btn">Characters</button></a>
+        <a href="curiosities.html"><button class="btn">Curiosities</button></a>
+      </nav>
+    </header>
+      
+    
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Gender'],
+          ['Male',     370],
+          ['Female',      74],
+          ['Unknow',  44],
+          ['Genderless', 5]
+        ]);
+
+        var options = {
+          title: 'Characters per gender',
+          is3D: true,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
+    <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+
+   <div id="piechart_3d" style="width: 100%; height: 100%; background-color:black ;"></div>
+   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Status'],
+          ['Alive',     281],
+          ['Dead',      148],
+          ['Unknow',  64],
+        ]);
+
+        var options = {
+          title: 'Characters per Status'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+    <div id="piechart" style="width: 900px; height: 500px;"></div>
+ 
+    <footer class="made">
+      <img src="Images/ReMfim.JPG" id="ReMfim">
+      <p> Created and developed by <a href="https://github.com/ArianeCMachado">Ariane Machado</a> for Bootcamp SAP008 - Laboratoria ©
+      </p>
+    </footer>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
