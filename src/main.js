@@ -23,7 +23,6 @@ const PrintarCards =lista => {
   }
 PrintarCards(characters)
 
-
 const selectStatus = document.querySelector(".select-status");
 const printStatusFiltered =()=>{
   const statu = selectStatus.value

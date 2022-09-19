@@ -46,7 +46,7 @@ describe('sortCharacters', () => {
     expect(typeof sortCharacters).toBe('function');
   });
 
-  it('should return "Morty", "Ricky", "Sam" for "Ricky", "Sam", "Morty" with order=="A-Z"', () => {
+  it('should return Albert,Beth, Jerry, Morty, Ricky, Sam for Ricky, Sam, Morty, Albert, Beth, Jerry with order=="A-Z"', () => {
     expect(sortCharacters(characters, "A-Z")).toStrictEqual([
       Albert,
       Beth,
@@ -61,7 +61,7 @@ describe('sortCharacters', () => {
     expect(typeof sortCharacters).toBe('function');
   });
 
-  it('should return "Morty", "Ricky", "Sam" for "Ricky", "Sam", "Morty" with order=="Z-A"', () => {
+  it('should return Sam, Ricky, Morty, Jerry, Beth. Albert for Ricky, Sam, Morty, Albert, Beth, Jerry  with order=="Z-A"', () => {
     expect(sortCharacters(characters, "Z-A")).toStrictEqual([
       Sam,
       Ricky,
@@ -82,7 +82,7 @@ describe('filterGender', () => {
     expect(typeof filterGender).toBe('function');
   });
 
-  it('should return "Sam" for characters with genders=="female"', () => {
+  it('should return Sam e Beth for characters with genders=="female"', () => {
     expect(filterGender(characters, "Female")).toStrictEqual([
       Sam,
       Beth
@@ -98,7 +98,7 @@ describe('filterSpecie', () => {
     expect(typeof filterSpecie).toBe('function');
   });
 
-  it('should return "Ricky" for characters with Specie=="human"', () => {
+  it('should return Ricky,Sam, Morty, Albert, Beth, Jerry for characters with Specie=="human"', () => {
     expect(filterSpecie(characters, "Human")).toStrictEqual([
       Ricky,
       Sam,
@@ -119,7 +119,7 @@ describe('filterStatu', () => {
     expect(typeof filterStatu).toBe('function');
   });
 
-  it('should return "Sam" for characters with Status=="alive"', () => {
+  it('should return Ricky, Sam, Morty e Beth for characters with Status=="alive"', () => {
     expect(filterStatu(characters, "Alive")).toStrictEqual([
       Ricky,
       Sam,
@@ -143,6 +143,10 @@ describe('CalAgregado', () => {
 
   it('should return 20%', () => {
     expect(CalAgregado(10, 2)).toEqual(20);
+  });
+
+  it('should return 10%', () => {
+    expect(CalAgregado(300, 30)).toEqual(10);
   });
 
 });
