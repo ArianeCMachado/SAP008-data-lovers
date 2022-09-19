@@ -1,4 +1,5 @@
 # Data Lovers 🌟🧬 Rick e Morty 🪐
+Segundo projeto da turma SAP008 da Laboratoria - https://arianecmachado.github.io/SAP008-data-lovers/
 
 ## 🚀 *Introdução*
 
@@ -42,7 +43,69 @@ E segundo passo, um protótipo de alta fidelidade para que o cliente tivesse uma
 Depois de enviado o protótipo para várias pessoas testarem a usabilidade do projeto. (5 ao total)
 Foi percebido que alguns erros ortográficos e a falta de um botão para voltar ao menu inicial. E alterado para chegar ao protótipo final.
 
+## 🔧 Passo a passo 
+Com o HTML básico, foi escrito o CSS básico.
+E assim o JS foi realizado encima dos obrjetivos de aprendizagem para realizar a:
 
+###Ordenação
+```
+const printAZOrdered =()=>{
+  const orderAZ = selectOrderAZ.value
+  const resultAZ = sortCharacters(characters,orderAZ)
+```
+
+###Filtro
+```
+const printGenderFiltered =()=>{
+  const gender = selectGenders.value
+  const resultGender = filterGender(characters, gender)
+```
+
+###Cálculo agregado
+```
+ const parcial = resultGender.length
+  const resultCalculo = CalAgregado(characters.length,parcial)
+  document.getElementById("mensagem").innerHTML= "This category represents " +resultCalculo+ " % of the characters"
+```
+
+
+## 🔩 Teste
+
+Os tests verificam a funcionalidade do projeto.
+
+### Verificando a ordenação
+
+```
+  it('should return Albert,Beth, Jerry, Morty, Ricky, Sam for Ricky, Sam, Morty, Albert, Beth, Jerry with order=="A-Z"', () => {
+    expect(sortCharacters(characters, "A-Z")).toStrictEqual([
+  it('should return Sam, Ricky, Morty, Jerry, Beth. Albert for Ricky, Sam, Morty, Albert, Beth, Jerry  with order=="Z-A"', () => {
+    expect(sortCharacters(characters, "Z-A")).toStrictEqual([
+```
+
+### Verificando os filtros
+
+```
+  it('should return Sam e Beth for characters with genders=="female"', () => {
+    expect(filterGender(characters, "Female")).toStrictEqual([
+  
+  it('should return Ricky,Sam, Morty, Albert, Beth, Jerry for characters with Specie=="human"', () => {
+    expect(filterSpecie(characters, "Human")).toStrictEqual([
+    
+  it('should return Ricky, Sam, Morty e Beth for characters with Status=="alive"', () => {
+    expect(filterStatu(characters, "Alive")).toStrictEqual([
+```
+
+### Verificando o cálculo agregado
+
+```
+it('should return 50%', () => {
+    expect(CalAgregado(10, 5)).toEqual(50);
+  });
+```
+
+## ✒️ Autora
+
+Projeto realizado por Ariane Costa Machado. Com grande ajuda de todo o pessoal da Laboratoria.
 
 
 
